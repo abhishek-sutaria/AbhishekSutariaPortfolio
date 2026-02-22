@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Abhishek Sutaria — MS Data Science at Indiana University Bloomington. Data Engineer, ML Researcher & AI Systems Builder. Specializing in LLMs, MLOps, and large-scale data pipelines." />
+  <meta name="keywords"
+    content="Abhishek Sutaria, Data Science, Machine Learning, AI Engineer, Data Engineer, LLM, MLOps, Indiana University" />
+  <meta property="og:title" content="Abhishek Sutaria — Data Science & AI Engineer" />
+  <meta property="og:description"
+    content="MS Data Science @ IU Bloomington · Former Data Engineer @ Edelweiss · AI Researcher" />
+  <meta property="og:type" content="website" />
+  <title>Abhishek Sutaria — Data Science & AI Engineer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%234f8df7'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-weight='800' font-size='18' fill='white'>A</text></svg>" />
+</head>
+
+<body>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress" role="progressbar" aria-label="Page scroll progress"></div>
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ── NAVIGATION ─────────────────────────────────────────────── -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" aria-label="Back to top">A<span>.</span>Sutaria</a>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-cta"
+          aria-label="Download Resume PDF">Resume ↗</a></li>
+    </ul>
+
+    <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" id="hamburger-btn">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigation menu" aria-modal="true">
+    <button class="mobile-menu-close" id="mobile-close" aria-label="Close navigation menu">✕</button>
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+    <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+    <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()">Resume ↗</a>
+  </div>
+
+  <!-- ── HERO ───────────────────────────────────────────────────── -->
+  <main>
+    <section id="hero" aria-label="Introduction">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot" aria-hidden="true"></span>
+          Open to Opportunities
+        </div>
+
+        <h1 class="hero-name">Abhishek Sutaria</h1>
+
+        <p class="hero-tagline">
+          <strong>MS Data Science</strong> @ Indiana University Bloomington &nbsp;·&nbsp;
+          Former <strong>Data Engineer</strong> @ Edelweiss Global Markets
+        </p>
+
+        <div class="hero-roles" aria-label="Roles" aria-live="polite">
+          <span id="typed-text"></span><span class="cursor-blink" aria-hidden="true"></span>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary"
+            id="hero-resume-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            View Resume
+          </a>
+          <a href="#contact" class="btn-secondary" id="hero-contact-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+            Get in Touch
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-value" data-count="2">0</div>
+            <div class="hero-stat-label">Years Industry Experience</div>
+          </div>
+          <div>
+            <div class="hero-stat-value" data-count="5">0</div>
+            <div class="hero-stat-label">AI/ML Projects Shipped</div>
+          </div>
+          <div>
+            <div class="hero-stat-value" data-count="82" data-suffix="+">0</div>
+            <div class="hero-stat-label">Academic Citations</div>
+          </div>
+          <div>
+            <div class="hero-stat-value" data-count="1" data-prefix="" data-suffix="TB+/day">1</div>
+            <div class="hero-stat-label">Data Processed Daily</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-chevron"></div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ──────────────────────────────────────────────────── -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="about-grid">
+        <div class="about-photo-wrap reveal">
+          <img src="assets/profile-1.jpg" alt="Abhishek Sutaria — profile photo" class="about-photo" loading="lazy"
+            width="340" />
+          <div class="about-photo-frame" aria-hidden="true"></div>
+          <div class="about-photo-accent" aria-hidden="true"></div>
+        </div>
+
+        <div class="about-text">
+          <p class="section-label reveal">About</p>
+          <h2 class="section-title reveal reveal-delay-1" id="about-heading">Engineering intelligence,<br>at scale.</h2>
+
+          <p class="reveal reveal-delay-2">
+            I'm a <strong>Data Scientist and AI/ML Engineer</strong> with 2+ years of industry experience building
+            production-grade systems—from processing 1TB+ of daily equities data at <strong>Edelweiss Global
+              Markets</strong>
+            to engineering multi-agent AI systems and LLM pipelines at Indiana University's research labs.
+          </p>
+          <p class="reveal reveal-delay-3">
+            My work lives at the intersection of <strong>rigorous data engineering</strong> and <strong>cutting-edge AI
+              research</strong>:
+            I've shipped validated ETL pipelines used by quant teams, built a real-time AI digital twin of a university
+            professor,
+            and published research cited <strong>82+ times</strong> in smart energy systems.
+          </p>
+          <p class="reveal reveal-delay-4">
+            Currently pursuing my <strong>MS in Data Science at Indiana University Bloomington</strong> (GPA 3.6/4.0),
+            while simultaneously contributing to two active research projects and an industry data science internship.
+            I thrive where <strong>precision meets velocity</strong>.
+          </p>
+
+          <div class="about-chips reveal">
+            <span class="about-chip">Python</span>
+            <span class="about-chip">PySpark</span>
+            <span class="about-chip">LLMs</span>
+            <span class="about-chip">MLOps</span>
+            <span class="about-chip">Airflow</span>
+            <span class="about-chip">AWS</span>
+            <span class="about-chip">PyTorch</span>
+            <span class="about-chip">FastAPI</span>
+            <span class="about-chip">Multi-Agent AI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ─────────────────────────────────────────────── -->
+    <section id="experience" aria-labelledby="experience-heading">
+      <div class="experience-inner">
+        <p class="section-label reveal">Experience</p>
+        <h2 class="section-title reveal reveal-delay-1" id="experience-heading">Where I've built.</h2>
+        <p class="section-subtitle reveal reveal-delay-2">
+          From quant data infrastructure at scale to frontier AI research — a track record of shipping systems that
+          matter.
+        </p>
+
+        <div class="exp-timeline">
+
+          <!-- IU Bloomington Research -->
+          <article class="exp-item reveal">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">Research Intern — AI Digital Twin</div>
+                <div class="exp-company">Indiana University Bloomington · Bloomington, IN</div>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-date">Sep 2025 – Present</span>
+                <span class="exp-type research">Research</span>
+              </div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Engineered an <strong>AI-powered digital twin</strong> of a university professor using multi-agent
+                frameworks (CrewAI, LangChain) with RAG pipelines over multi-modal academic datasets, enabling
+                contextual Q&amp;A and personalized tutoring at scale.</li>
+              <li>Built a <strong>real-time multimodal interaction system</strong> integrating voice cloning (Whisper,
+                VALL-E, ElevenLabs) with lip-synced avatar rendering via WebRTC, React, and Framer Motion — delivering
+                hyper-realistic teaching experience with reduced conversational latency.</li>
+              <li>Optimized model alignment through <strong>knowledge distillation, RL feedback loops</strong>, and
+                vector database optimization using Pinecone, FAISS, and Weaviate — improving multi-turn response
+                accuracy and engagement quality.</li>
+            </ul>
+          </article>
+
+          <!-- Digbi Health -->
+          <article class="exp-item reveal">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">Data Science Intern</div>
+                <div class="exp-company">Digbi Health · California (Remote)</div>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-date">Jun 2025 – Present</span>
+                <span class="exp-type intern">Internship</span>
+              </div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Developed <strong>production-ready APIs</strong> using FastAPI, exposing cleaned and tagged datasets
+                to downstream analytical services and internal user dashboards.</li>
+              <li>Engineered robust <strong>data stratification logic</strong> in Python and SQL to identify chronic
+                condition cohorts and CPT code patterns — analogous to order book-level tagging in market microstructure
+                analysis.</li>
+              <li>Integrated <strong>LLMs and autonomous agents</strong> to automate pipeline logic, dynamically parsing
+                schema variants and optimizing unstructured data ingestion — cutting preprocessing time by
+                <strong>40%</strong>.</li>
+              <li>Collaborated directly with CEO and engineering team to align technical outcomes with business
+                priorities.</li>
+            </ul>
+          </article>
+
+          <!-- IU Indianapolis Research -->
+          <article class="exp-item reveal">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">Research Intern — Generative Modeling</div>
+                <div class="exp-company">Indiana University Indianapolis · Indianapolis, IN</div>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-date">May 2025 – Jul 2025</span>
+                <span class="exp-type research">Research</span>
+              </div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Designed a <strong>scalable generative modeling pipeline</strong> using CycleGAN, VAE-RNN, and
+                Diffusion models to predict high-resolution temporal changes in complex structured data, leveraging
+                sequential dependency modeling.</li>
+              <li>Deployed <strong>end-to-end AI workflows</strong> in a containerized, cloud-ready architecture using
+                Docker and PyTorch Lightning — ensuring reproducibility, version control, and performance integrity.
+              </li>
+            </ul>
+          </article>
+
+          <!-- Edelweiss -->
+          <article class="exp-item reveal">
+            <div class="exp-header">
+              <div>
+                <div class="exp-role">Data Engineer</div>
+                <div class="exp-company">Edelweiss Global Markets · Mumbai, India</div>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-date">Jul 2022 – Aug 2024</span>
+                <span class="exp-type full-time">Full-time</span>
+              </div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Developed <strong>Python-based data quality algorithms</strong> for financial data streams, improving
+                data accuracy by <strong>70%</strong> and reducing ingestion errors by <strong>40%</strong> in
+                AWS-hosted pipelines.</li>
+              <li>Engineered <strong>40+ automated ETL pipelines</strong> using Airflow and Spark to process over
+                <strong>1TB/day</strong> of equities and futures data, supporting quant strategy research.</li>
+              <li>Built a <strong>validation framework</strong> using Polars and Great Expectations on AWS S3, boosting
+                data integrity from 85% to <strong>98%</strong> across 500K+ records daily.</li>
+              <li>Integrated multi-source market data feeds and trading signals via Python-based APIs, reducing
+                <strong>cross-system latency by 40%</strong> for quant research workloads.</li>
+              <li>Automated tick-level <strong>10–12TB daily data cleanup</strong> with shell scripts on AWS S3, saving
+                8+ hours weekly and improving storage utilization by <strong>30%</strong>.</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ────────────────────────────────────────────────── -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <div class="projects-inner">
+        <p class="section-label reveal">Projects</p>
+        <h2 class="section-title reveal reveal-delay-1" id="projects-heading">Things I've shipped.</h2>
+        <p class="section-subtitle reveal reveal-delay-2">
+          Research papers, AI systems, and data products — each one solving a real problem with measurable outcomes.
+        </p>
+
+        <div class="projects-grid">
+
+          <!-- MeetSmart — Featured -->
+          <article class="project-card featured reveal" aria-label="MeetSmart project">
+            <div>
+              <div class="project-tags">
+                <span class="project-tag">FastAPI</span>
+                <span class="project-tag">Whisper ASR</span>
+                <span class="project-tag">NLP</span>
+                <span class="project-tag">VADER</span>
+                <span class="project-tag">Python</span>
+              </div>
+              <h3 class="project-title">MeetSmart — AI-Powered Meeting Companion</h3>
+              <p class="project-desc">
+                Architected and deployed an AI meeting intelligence platform with real-time multilingual speech-to-text
+                (Whisper ASR), abstractive/extractive NLP summarization, VADER sentiment analysis, and SMTP-based
+                automated email distribution. Engineered modular NLP pipelines with regex-based action item extraction,
+                Google Translate API, and Matplotlib/WordCloud visualizations.
+              </p>
+              <div style="display:flex;gap:12px;flex-wrap:wrap;">
+                <div class="project-metric">
+                  <div>
+                    <div class="project-metric-value">80%</div>
+                    <div class="project-metric-label">Reduction in post-meeting<br>documentation time</div>
+                  </div>
+                </div>
+                <div class="project-metric">
+                  <div>
+                    <div class="project-metric-value">&gt;90%</div>
+                    <div class="project-metric-label">Action item extraction<br>accuracy</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- AI Digital Twin -->
+          <article class="project-card reveal" aria-label="AI Digital Twin project">
+            <div class="project-tags">
+              <span class="project-tag">CrewAI</span>
+              <span class="project-tag">LangChain</span>
+              <span class="project-tag">RAG</span>
+              <span class="project-tag">WebRTC</span>
+              <span class="project-tag">ElevenLabs</span>
+            </div>
+            <h3 class="project-title">AI Digital Twin of a Professor</h3>
+            <p class="project-desc">
+              Orchestrated multi-agent frameworks with RAG pipelines over multi-modal academic datasets to create a
+              personalized tutoring AI. Integrated voice cloning (VALL-E, ElevenLabs) and lip-synced avatar rendering
+              with WebRTC, enabling hyper-realistic conversational teaching experiences.
+            </p>
+            <div class="project-metric" style="margin-top:auto;">
+              <div>
+                <div class="project-metric-value">3</div>
+                <div class="project-metric-label">Vector DBs integrated<br>Pinecone · FAISS · Weaviate</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- FinEdu.ai -->
+          <article class="project-card reveal" aria-label="FinEdu.ai project">
+            <div class="project-tags">
+              <span class="project-tag">Llama-2-7B</span>
+              <span class="project-tag">RAG</span>
+              <span class="project-tag">LangChain</span>
+              <span class="project-tag">HuggingFace</span>
+              <span class="project-tag">Gradio</span>
+            </div>
+            <h3 class="project-title">FinEdu.ai — Finance Education LLM</h3>
+            <p class="project-desc">
+              Designed and implemented a Llama-2-7b-chat-hf powered LLM with RAG, Sentence-Transformers, and LlamaIndex
+              for accurate financial definitions. Built an interactive Gradio interface ingesting Kaggle datasets,
+              vectorized with HuggingFace embeddings for beginner-friendly financial explanations.
+            </p>
+            <div class="project-metric" style="margin-top:auto;">
+              <div>
+                <div class="project-metric-value">7B</div>
+                <div class="project-metric-label">Parameter LLM · RAG-powered<br>semantic search for finance</div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Diabetic Retinopathy -->
+          <article class="project-card reveal" aria-label="Diabetic Retinopathy project">
+            <div class="project-tags">
+              <span class="project-tag">CNN</span>
+              <span class="project-tag">GAN</span>
+              <span class="project-tag">Deep Learning</span>
+              <span class="project-tag">Python</span>
+            </div>
+            <h3 class="project-title">Diabetic Retinopathy Detection — CNN + DR-GAN</h3>
+            <p class="project-desc">
+              Designed a deep learning system using CNNs and GANs to automate diabetic retinopathy classification across
+              DR severity stages. Scaled processing to 1,000 images/hour, reducing diagnosis time by 60% and
+              facilitating earlier clinical intervention.
+            </p>
+            <div class="project-metric" style="margin-top:auto;">
+              <div>
+                <div class="project-metric-value">92.3%</div>
+                <div class="project-metric-label">Classification accuracy<br>across DR severity stages</div>
+              </div>
+            </div>
+            <div class="project-award">🥇 1st Place — IETE-SF DJ Spark · State-level publication</div>
+          </article>
+
+          <!-- Smart Energy Grid -->
+          <article class="project-card reveal" aria-label="Smart Energy Grid project">
+            <div class="project-tags">
+              <span class="project-tag">Random Forest</span>
+              <span class="project-tag">SVM</span>
+              <span class="project-tag">Lasso</span>
+              <span class="project-tag">Pandas</span>
+              <span class="project-tag">Scikit-learn</span>
+            </div>
+            <h3 class="project-title">Smart Energy Grid — Solar Forecasting ML</h3>
+            <p class="project-desc">
+              Developed a solar radiation forecasting model using hyperparameter-tuned Random Forests, achieving 72%
+              accuracy and outperforming traditional methods by 25%. Applied Lasso, SVM, and Linear Regression,
+              validated with ROC curves and confusion matrices. Published in Design Engineering Journal.
+            </p>
+            <div class="project-metric" style="margin-top:auto;">
+              <div>
+                <div class="project-metric-value">82+</div>
+                <div class="project-metric-label">Academic citations &mdash;<br>Design Engineering Journal</div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SKILLS ─────────────────────────────────────────────────── -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <div class="skills-inner">
+        <p class="section-label reveal">Skills</p>
+        <h2 class="section-title reveal reveal-delay-1" id="skills-heading">Tools of the trade.</h2>
+        <p class="section-subtitle reveal reveal-delay-2">
+          A full-stack data science toolkit — from raw data pipelines to deployed AI systems.
+        </p>
+
+        <div class="skills-groups">
+
+          <div class="reveal">
+            <div class="skills-group-title">Languages &amp; Query</div>
+            <div class="skills-grid" id="skills-lang">
+              <span class="skill-badge"><span class="skill-dot lang"></span>Python</span>
+              <span class="skill-badge"><span class="skill-dot lang"></span>SQL</span>
+              <span class="skill-badge"><span class="skill-dot lang"></span>R</span>
+              <span class="skill-badge"><span class="skill-dot lang"></span>PySpark</span>
+              <span class="skill-badge"><span class="skill-dot lang"></span>Scala</span>
+              <span class="skill-badge"><span class="skill-dot lang"></span>Java</span>
+              <span class="skill-badge"><span class="skill-dot lang"></span>Shell Scripting</span>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-1">
+            <div class="skills-group-title">ML / AI Engineering</div>
+            <div class="skills-grid">
+              <span class="skill-badge"><span class="skill-dot ml"></span>PyTorch</span>
+              <span class="skill-badge"><span class="skill-dot ml"></span>TensorFlow</span>
+              <span class="skill-badge"><span class="skill-dot ml"></span>Keras</span>
+              <span class="skill-badge"><span class="skill-dot ml"></span>Scikit-learn</span>
+              <span class="skill-badge"><span class="skill-dot ml"></span>LangChain</span>
+              <span class="skill-badge"><span class="skill-dot ml"></span>CrewAI</span>
+              <span class="skill-badge"><span class="skill-dot ml"></span>HuggingFace</span>
+              <span class="skill-badge"><span class="skill-dot ml"></span>NLTK</span>
+              <span class="skill-badge"><span class="skill-dot ml"></span>NumPy</span>
+              <span class="skill-badge"><span class="skill-dot ml"></span>Pandas</span>
+              <span class="skill-badge"><span class="skill-dot ml"></span>Polars</span>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-2">
+            <div class="skills-group-title">Data Engineering &amp; MLOps</div>
+            <div class="skills-grid">
+              <span class="skill-badge"><span class="skill-dot data"></span>Apache Spark</span>
+              <span class="skill-badge"><span class="skill-dot data"></span>Airflow</span>
+              <span class="skill-badge"><span class="skill-dot data"></span>Hadoop</span>
+              <span class="skill-badge"><span class="skill-dot data"></span>Snowflake</span>
+              <span class="skill-badge"><span class="skill-dot data"></span>PostgreSQL</span>
+              <span class="skill-badge"><span class="skill-dot data"></span>MySQL</span>
+              <span class="skill-badge"><span class="skill-dot data"></span>FastAPI</span>
+              <span class="skill-badge"><span class="skill-dot data"></span>Docker</span>
+              <span class="skill-badge"><span class="skill-dot data"></span>Great Expectations</span>
+              <span class="skill-badge"><span class="skill-dot data"></span>Git</span>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-3">
+            <div class="skills-group-title">Cloud, BI &amp; Vector Databases</div>
+            <div class="skills-grid">
+              <span class="skill-badge"><span class="skill-dot cloud"></span>AWS (EC2, S3)</span>
+              <span class="skill-badge"><span class="skill-dot cloud"></span>GCP</span>
+              <span class="skill-badge"><span class="skill-dot cloud"></span>Pinecone</span>
+              <span class="skill-badge"><span class="skill-dot cloud"></span>FAISS</span>
+              <span class="skill-badge"><span class="skill-dot cloud"></span>Weaviate</span>
+              <span class="skill-badge"><span class="skill-dot cloud"></span>Power BI</span>
+              <span class="skill-badge"><span class="skill-dot cloud"></span>Tableau</span>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-4">
+            <div class="skills-group-title">Research &amp; Specializations</div>
+            <div class="skills-grid">
+              <span class="skill-badge"><span class="skill-dot science"></span>Large Language Models</span>
+              <span class="skill-badge"><span class="skill-dot science"></span>Computer Vision</span>
+              <span class="skill-badge"><span class="skill-dot science"></span>Reinforcement Learning</span>
+              <span class="skill-badge"><span class="skill-dot science"></span>Generative AI (GANs, Diffusion)</span>
+              <span class="skill-badge"><span class="skill-dot science"></span>RAG Pipelines</span>
+              <span class="skill-badge"><span class="skill-dot science"></span>Time Series Forecasting</span>
+              <span class="skill-badge"><span class="skill-dot science"></span>NLP / Sentiment Analysis</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ────────────────────────────────────────────────── -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="contact-inner">
+        <p class="section-label reveal" style="justify-content:center;">Contact</p>
+        <h2 class="contact-headline reveal reveal-delay-1" id="contact-heading">Let's build<br>something great.</h2>
+        <p class="contact-sub reveal reveal-delay-2">
+          I'm currently open to full-time Data Science, ML Engineering, and AI Research roles.
+          Whether you have a role in mind or just want to connect — my inbox is open.
+        </p>
+
+        <div class="reveal reveal-delay-3">
+          <a href="mailto:abhishek.sutaria@gmail.com" class="contact-email-btn"
+            aria-label="Send email to Abhishek Sutaria">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            abhishek.sutaria@gmail.com
+          </a>
+        </div>
+
+        <div class="contact-socials reveal reveal-delay-4">
+          <a href="https://linkedin.com/in/abhisheksutaria" target="_blank" rel="noopener noreferrer"
+            class="social-link" aria-label="LinkedIn profile">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/abhisheksutaria" target="_blank" rel="noopener noreferrer" class="social-link"
+            aria-label="GitHub profile">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+            GitHub
+          </a>
+          <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="social-link"
+            aria-label="Download resume PDF">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Resume
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────── -->
+  <footer>
+    <span class="footer-copy">© 2025 Abhishek Sutaria. All rights reserved.</span>
+    <span class="footer-built">Built with <span>♥</span> &amp; vanilla JS</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
