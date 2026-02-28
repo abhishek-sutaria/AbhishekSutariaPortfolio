@@ -20,6 +20,10 @@
 
 <body>
 
+  <!-- Blueprint Grid Background -->
+  <div class="blueprint-grid" aria-hidden="true"></div>
+  <div class="blueprint-glow" aria-hidden="true"></div>
+
   <!-- Scroll Progress -->
   <div id="scroll-progress" role="progressbar" aria-label="Page scroll progress"></div>
 
@@ -27,7 +31,13 @@
   <div id="cursor-dot" aria-hidden="true"></div>
   <div id="cursor-ring" aria-hidden="true"></div>
 
-  <!-- ── NAVIGATION ─────────────────────────────────────────────── -->
+  <!-- Status Pill -->
+  <div class="status-pill" aria-label="Current status">
+    <span class="pulse-dot" aria-hidden="true"></span>
+    Currently: Researching Multi-Agent AI
+  </div>
+
+  <!-- ── NAVIGATION ────────────────────────────────────────────── -->
   <nav id="navbar" role="navigation" aria-label="Main navigation">
     <a href="#hero" class="nav-logo" aria-label="Back to top">A<span>.</span>Sutaria</a>
 
@@ -56,21 +66,21 @@
     <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()">Resume ↗</a>
   </div>
 
-  <!-- ── HERO ───────────────────────────────────────────────────── -->
+  <!-- ── HERO ──────────────────────────────────────────────────── -->
   <main>
     <section id="hero" aria-label="Introduction">
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="hero-grid" aria-hidden="true"></div>
 
       <div class="hero-content">
-        <div class="hero-badge">
+        <div class="hero-badge reveal">
           <span class="dot" aria-hidden="true"></span>
           Open to Opportunities
         </div>
 
-        <h1 class="hero-name">Abhishek Sutaria</h1>
+        <h1 class="hero-name typo-fade">Abhishek Sutaria</h1>
 
-        <p class="hero-tagline">
+        <p class="hero-tagline typo-fade-sub">
           <strong>MS Data Science</strong> @ Indiana University Bloomington &nbsp;·&nbsp;
           Former <strong>Data Engineer</strong> @ Edelweiss Global Markets
         </p>
@@ -80,7 +90,7 @@
         </div>
 
         <div class="hero-ctas">
-          <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary"
+          <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-magnetic btn-primary"
             id="hero-resume-btn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -90,7 +100,7 @@
             </svg>
             View Resume
           </a>
-          <a href="#contact" class="btn-secondary" id="hero-contact-btn">
+          <a href="#contact" class="btn-magnetic btn-secondary" id="hero-contact-btn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
@@ -100,21 +110,21 @@
         </div>
 
         <div class="hero-stats">
-          <div>
+          <div class="hero-stat">
             <div class="hero-stat-value" data-count="2">0</div>
-            <div class="hero-stat-label">Years Industry Experience</div>
+            <div class="hero-stat-label">Years Experience</div>
           </div>
-          <div>
+          <div class="hero-stat">
             <div class="hero-stat-value" data-count="5">0</div>
-            <div class="hero-stat-label">AI/ML Projects Shipped</div>
+            <div class="hero-stat-label">AI/ML Projects</div>
           </div>
-          <div>
+          <div class="hero-stat">
             <div class="hero-stat-value" data-count="82" data-suffix="+">0</div>
-            <div class="hero-stat-label">Academic Citations</div>
+            <div class="hero-stat-label">Citations</div>
           </div>
-          <div>
-            <div class="hero-stat-value" data-count="1" data-prefix="" data-suffix="TB+/day">1</div>
-            <div class="hero-stat-label">Data Processed Daily</div>
+          <div class="hero-stat">
+            <div class="hero-stat-value" data-count="1" data-suffix="TB+/day">0</div>
+            <div class="hero-stat-label">Data Processed</div>
           </div>
         </div>
       </div>
@@ -125,34 +135,35 @@
       </div>
     </section>
 
-    <!-- ── ABOUT ──────────────────────────────────────────────────── -->
+    <!-- ── ABOUT ─────────────────────────────────────────────────── -->
     <section id="about" aria-labelledby="about-heading">
       <div class="about-grid">
         <div class="about-photo-wrap reveal">
           <img src="assets/profile-1.jpg" alt="Abhishek Sutaria — profile photo" class="about-photo" loading="lazy"
-            width="340" />
+            width="320" />
           <div class="about-photo-frame" aria-hidden="true"></div>
           <div class="about-photo-accent" aria-hidden="true"></div>
         </div>
 
         <div class="about-text">
           <p class="section-label reveal">About</p>
-          <h2 class="section-title reveal reveal-delay-1" id="about-heading">Engineering intelligence,<br>at scale.</h2>
+          <h2 class="section-title typo-fade reveal-delay-1" id="about-heading">Engineering intelligence,<br>at scale.
+          </h2>
 
-          <p class="reveal reveal-delay-2">
+          <p class="reveal reveal-delay-2 typo-fade-sub">
             I'm a <strong>Data Scientist and AI/ML Engineer</strong> with 2+ years of industry experience building
             production-grade systems—from processing 1TB+ of daily equities data at <strong>Edelweiss Global
               Markets</strong>
             to engineering multi-agent AI systems and LLM pipelines at Indiana University's research labs.
           </p>
-          <p class="reveal reveal-delay-3">
+          <p class="reveal reveal-delay-3 typo-fade-sub">
             My work lives at the intersection of <strong>rigorous data engineering</strong> and <strong>cutting-edge AI
               research</strong>:
             I've shipped validated ETL pipelines used by quant teams, built a real-time AI digital twin of a university
             professor,
             and published research cited <strong>82+ times</strong> in smart energy systems.
           </p>
-          <p class="reveal reveal-delay-4">
+          <p class="reveal reveal-delay-4 typo-fade-sub">
             Currently pursuing my <strong>MS in Data Science at Indiana University Bloomington</strong> (GPA 3.6/4.0),
             while simultaneously contributing to two active research projects and an industry data science internship.
             I thrive where <strong>precision meets velocity</strong>.
@@ -173,17 +184,29 @@
       </div>
     </section>
 
-    <!-- ── EXPERIENCE ─────────────────────────────────────────────── -->
+    <!-- ── EXPERIENCE (Tracing Beam) ─────────────────────────────── -->
     <section id="experience" aria-labelledby="experience-heading">
       <div class="experience-inner">
         <p class="section-label reveal">Experience</p>
-        <h2 class="section-title reveal reveal-delay-1" id="experience-heading">Where I've built.</h2>
-        <p class="section-subtitle reveal reveal-delay-2">
+        <h2 class="section-title typo-fade reveal-delay-1" id="experience-heading">Where I've built.</h2>
+        <p class="section-subtitle reveal reveal-delay-2 typo-fade-sub">
           From quant data infrastructure at scale to frontier AI research — a track record of shipping systems that
           matter.
         </p>
 
         <div class="exp-timeline">
+          <!-- SVG Tracing Beam -->
+          <svg class="exp-beam-svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="beamGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#4f8df7" />
+                <stop offset="50%" stop-color="#7c5cfc" />
+                <stop offset="100%" stop-color="#3ddc84" />
+              </linearGradient>
+            </defs>
+            <line class="exp-beam-bg" x1="1" x2="1" y1="0" y2="100%" />
+            <line class="exp-beam-glow" x1="1" x2="1" y1="0" y2="0" />
+          </svg>
 
           <!-- IU Bloomington Research -->
           <article class="exp-item reveal">
@@ -230,8 +253,7 @@
                 analysis.</li>
               <li>Integrated <strong>LLMs and autonomous agents</strong> to automate pipeline logic, dynamically parsing
                 schema variants and optimizing unstructured data ingestion — cutting preprocessing time by
-                <strong>40%</strong>.
-              </li>
+                <strong>40%</strong>.</li>
               <li>Collaborated directly with CEO and engineering team to align technical outcomes with business
                 priorities.</li>
             </ul>
@@ -276,13 +298,11 @@
                 data accuracy by <strong>70%</strong> and reducing ingestion errors by <strong>40%</strong> in
                 AWS-hosted pipelines.</li>
               <li>Engineered <strong>40+ automated ETL pipelines</strong> using Airflow and Spark to process over
-                <strong>1TB/day</strong> of equities and futures data, supporting quant strategy research.
-              </li>
+                <strong>1TB/day</strong> of equities and futures data, supporting quant strategy research.</li>
               <li>Built a <strong>validation framework</strong> using Polars and Great Expectations on AWS S3, boosting
                 data integrity from 85% to <strong>98%</strong> across 500K+ records daily.</li>
               <li>Integrated multi-source market data feeds and trading signals via Python-based APIs, reducing
-                <strong>cross-system latency by 40%</strong> for quant research workloads.
-              </li>
+                <strong>cross-system latency by 40%</strong> for quant research workloads.</li>
               <li>Automated tick-level <strong>10–12TB daily data cleanup</strong> with shell scripts on AWS S3, saving
                 8+ hours weekly and improving storage utilization by <strong>30%</strong>.</li>
             </ul>
@@ -292,122 +312,120 @@
       </div>
     </section>
 
-    <!-- ── PROJECTS ────────────────────────────────────────────────── -->
+    <!-- ── PROJECTS (Bento Grid) ──────────────────────────────────── -->
     <section id="projects" aria-labelledby="projects-heading">
       <div class="projects-inner">
         <p class="section-label reveal">Projects</p>
-        <h2 class="section-title reveal reveal-delay-1" id="projects-heading">Things I've shipped.</h2>
-        <p class="section-subtitle reveal reveal-delay-2">
+        <h2 class="section-title typo-fade reveal-delay-1" id="projects-heading">Things I've shipped.</h2>
+        <p class="section-subtitle reveal reveal-delay-2 typo-fade-sub">
           Research papers, AI systems, and data products — each one solving a real problem with measurable outcomes.
         </p>
 
-        <div class="projects-grid">
+        <div class="projects-bento">
 
-          <!-- MeetSmart — Featured -->
-          <article class="project-card featured reveal" aria-label="MeetSmart project">
-            <div>
-              <div class="project-tags">
-                <span class="project-tag">FastAPI</span>
-                <span class="project-tag">Whisper ASR</span>
-                <span class="project-tag">NLP</span>
-                <span class="project-tag">VADER</span>
-                <span class="project-tag">Python</span>
-              </div>
-              <h3 class="project-title">MeetSmart — AI-Powered Meeting Companion</h3>
-              <p class="project-desc">
-                Architected and deployed an AI meeting intelligence platform with real-time multilingual speech-to-text
-                (Whisper ASR), abstractive/extractive NLP summarization, VADER sentiment analysis, and SMTP-based
-                automated email distribution. Engineered modular NLP pipelines with regex-based action item extraction,
-                Google Translate API, and Matplotlib/WordCloud visualizations.
-              </p>
-              <div style="display:flex;gap:12px;flex-wrap:wrap;">
-                <div class="project-metric">
-                  <div>
-                    <div class="project-metric-value">80%</div>
-                    <div class="project-metric-label">Reduction in post-meeting<br>documentation time</div>
-                  </div>
+          <!-- MeetSmart — span 2 -->
+          <article class="project-card span-2" aria-label="MeetSmart project">
+            <div class="project-tags">
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">Whisper ASR</span>
+              <span class="project-tag">NLP</span>
+              <span class="project-tag">VADER</span>
+              <span class="project-tag">Python</span>
+            </div>
+            <h3 class="project-title">MeetSmart — AI Meeting Companion</h3>
+            <p class="project-desc">
+              Architected an AI meeting intelligence platform with real-time multilingual speech-to-text (Whisper ASR),
+              abstractive/extractive NLP summarization, VADER sentiment analysis, and SMTP-based automated email
+              distribution. Engineered modular NLP pipelines with regex-based action item extraction and
+              Matplotlib/WordCloud visualizations.
+            </p>
+            <div class="project-metrics">
+              <div class="project-metric">
+                <div>
+                  <div class="project-metric-value">80%</div>
+                  <div class="project-metric-label">Doc time<br>reduction</div>
                 </div>
-                <div class="project-metric">
-                  <div>
-                    <div class="project-metric-value">&gt;90%</div>
-                    <div class="project-metric-label">Action item extraction<br>accuracy</div>
-                  </div>
+              </div>
+              <div class="project-metric">
+                <div>
+                  <div class="project-metric-value">&gt;90%</div>
+                  <div class="project-metric-label">Action item<br>accuracy</div>
                 </div>
               </div>
             </div>
           </article>
 
           <!-- AI Digital Twin -->
-          <article class="project-card reveal" aria-label="AI Digital Twin project">
+          <article class="project-card" aria-label="AI Digital Twin project">
             <div class="project-tags">
               <span class="project-tag">CrewAI</span>
               <span class="project-tag">LangChain</span>
               <span class="project-tag">RAG</span>
               <span class="project-tag">WebRTC</span>
-              <span class="project-tag">ElevenLabs</span>
             </div>
-            <h3 class="project-title">AI Digital Twin of a Professor</h3>
+            <h3 class="project-title">AI Digital Twin</h3>
             <p class="project-desc">
               Orchestrated multi-agent frameworks with RAG pipelines over multi-modal academic datasets to create a
-              personalized tutoring AI. Integrated voice cloning (VALL-E, ElevenLabs) and lip-synced avatar rendering
-              with WebRTC, enabling hyper-realistic conversational teaching experiences.
+              personalized tutoring AI with lip-synced avatar rendering via WebRTC.
             </p>
-            <div class="project-metric" style="margin-top:auto;">
-              <div>
-                <div class="project-metric-value">3</div>
-                <div class="project-metric-label">Vector DBs integrated<br>Pinecone · FAISS · Weaviate</div>
+            <div class="project-metrics">
+              <div class="project-metric">
+                <div>
+                  <div class="project-metric-value">3</div>
+                  <div class="project-metric-label">Vector DBs<br>integrated</div>
+                </div>
               </div>
             </div>
           </article>
 
           <!-- FinEdu.ai -->
-          <article class="project-card reveal" aria-label="FinEdu.ai project">
+          <article class="project-card" aria-label="FinEdu.ai project">
             <div class="project-tags">
               <span class="project-tag">Llama-2-7B</span>
               <span class="project-tag">RAG</span>
               <span class="project-tag">LangChain</span>
-              <span class="project-tag">HuggingFace</span>
               <span class="project-tag">Gradio</span>
             </div>
-            <h3 class="project-title">FinEdu.ai — Finance Education LLM</h3>
+            <h3 class="project-title">FinEdu.ai — Finance LLM</h3>
             <p class="project-desc">
-              Designed and implemented a Llama-2-7b-chat-hf powered LLM with RAG, Sentence-Transformers, and LlamaIndex
-              for accurate financial definitions. Built an interactive Gradio interface ingesting Kaggle datasets,
-              vectorized with HuggingFace embeddings for beginner-friendly financial explanations.
+              Designed a Llama-2-7b-chat-hf powered LLM with RAG, Sentence-Transformers, and LlamaIndex for accurate
+              financial definitions. Interactive Gradio interface with HuggingFace embeddings.
             </p>
-            <div class="project-metric" style="margin-top:auto;">
-              <div>
-                <div class="project-metric-value">7B</div>
-                <div class="project-metric-label">Parameter LLM · RAG-powered<br>semantic search for finance</div>
+            <div class="project-metrics">
+              <div class="project-metric">
+                <div>
+                  <div class="project-metric-value">7B</div>
+                  <div class="project-metric-label">Parameter<br>LLM</div>
+                </div>
               </div>
             </div>
           </article>
 
           <!-- Diabetic Retinopathy -->
-          <article class="project-card reveal" aria-label="Diabetic Retinopathy project">
+          <article class="project-card" aria-label="Diabetic Retinopathy project">
             <div class="project-tags">
               <span class="project-tag">CNN</span>
               <span class="project-tag">GAN</span>
               <span class="project-tag">Deep Learning</span>
-              <span class="project-tag">Python</span>
             </div>
-            <h3 class="project-title">Diabetic Retinopathy Detection — CNN + DR-GAN</h3>
+            <h3 class="project-title">DR Detection — CNN + GAN</h3>
             <p class="project-desc">
-              Designed a deep learning system using CNNs and GANs to automate diabetic retinopathy classification across
-              DR severity stages. Scaled processing to 1,000 images/hour, reducing diagnosis time by 60% and
-              facilitating earlier clinical intervention.
+              Deep learning system using CNNs and GANs to automate diabetic retinopathy classification. Scaled to 1,000
+              images/hour, reducing diagnosis time by 60%.
             </p>
-            <div class="project-metric" style="margin-top:auto;">
-              <div>
-                <div class="project-metric-value">92.3%</div>
-                <div class="project-metric-label">Classification accuracy<br>across DR severity stages</div>
+            <div class="project-metrics">
+              <div class="project-metric">
+                <div>
+                  <div class="project-metric-value">92.3%</div>
+                  <div class="project-metric-label">Classification<br>accuracy</div>
+                </div>
               </div>
             </div>
-            <div class="project-award">🥇 1st Place — IETE-SF DJ Spark · State-level publication</div>
+            <div class="project-award">🥇 1st Place — IETE-SF DJ Spark</div>
           </article>
 
           <!-- Smart Energy Grid -->
-          <article class="project-card reveal" aria-label="Smart Energy Grid project">
+          <article class="project-card span-2" aria-label="Smart Energy Grid project">
             <div class="project-tags">
               <span class="project-tag">Random Forest</span>
               <span class="project-tag">SVM</span>
@@ -417,14 +435,22 @@
             </div>
             <h3 class="project-title">Smart Energy Grid — Solar Forecasting ML</h3>
             <p class="project-desc">
-              Developed a solar radiation forecasting model using hyperparameter-tuned Random Forests, achieving 72%
-              accuracy and outperforming traditional methods by 25%. Applied Lasso, SVM, and Linear Regression,
-              validated with ROC curves and confusion matrices. Published in Design Engineering Journal.
+              Solar radiation forecasting model using hyperparameter-tuned Random Forests, achieving 72% accuracy and
+              outperforming traditional methods by 25%. Applied Lasso, SVM, and Linear Regression. Published in Design
+              Engineering Journal.
             </p>
-            <div class="project-metric" style="margin-top:auto;">
-              <div>
-                <div class="project-metric-value">82+</div>
-                <div class="project-metric-label">Academic citations &mdash;<br>Design Engineering Journal</div>
+            <div class="project-metrics">
+              <div class="project-metric">
+                <div>
+                  <div class="project-metric-value">82+</div>
+                  <div class="project-metric-label">Academic<br>citations</div>
+                </div>
+              </div>
+              <div class="project-metric">
+                <div>
+                  <div class="project-metric-value">72%</div>
+                  <div class="project-metric-label">Forecasting<br>accuracy</div>
+                </div>
               </div>
             </div>
           </article>
@@ -433,20 +459,20 @@
       </div>
     </section>
 
-    <!-- ── SKILLS ─────────────────────────────────────────────────── -->
+    <!-- ── SKILLS (Bento Grid + Spotlight) ─────────────────────────── -->
     <section id="skills" aria-labelledby="skills-heading">
       <div class="skills-inner">
         <p class="section-label reveal">Skills</p>
-        <h2 class="section-title reveal reveal-delay-1" id="skills-heading">Tools of the trade.</h2>
-        <p class="section-subtitle reveal reveal-delay-2">
+        <h2 class="section-title typo-fade reveal-delay-1" id="skills-heading">Tools of the trade.</h2>
+        <p class="section-subtitle reveal reveal-delay-2 typo-fade-sub">
           A full-stack data science toolkit — from raw data pipelines to deployed AI systems.
         </p>
 
-        <div class="skills-groups">
+        <div class="skills-bento">
 
-          <div class="reveal">
-            <div class="skills-group-title">Languages &amp; Query</div>
-            <div class="skills-grid" id="skills-lang">
+          <div class="skills-card span-2 reveal">
+            <div class="skills-group-title">Languages & Query</div>
+            <div class="skills-grid">
               <span class="skill-badge"><span class="skill-dot lang"></span>Python</span>
               <span class="skill-badge"><span class="skill-dot lang"></span>SQL</span>
               <span class="skill-badge"><span class="skill-dot lang"></span>R</span>
@@ -457,7 +483,20 @@
             </div>
           </div>
 
-          <div class="reveal reveal-delay-1">
+          <div class="skills-card reveal reveal-delay-1">
+            <div class="skills-group-title">Cloud & BI</div>
+            <div class="skills-grid">
+              <span class="skill-badge"><span class="skill-dot cloud"></span>AWS (EC2, S3)</span>
+              <span class="skill-badge"><span class="skill-dot cloud"></span>GCP</span>
+              <span class="skill-badge"><span class="skill-dot cloud"></span>Pinecone</span>
+              <span class="skill-badge"><span class="skill-dot cloud"></span>FAISS</span>
+              <span class="skill-badge"><span class="skill-dot cloud"></span>Weaviate</span>
+              <span class="skill-badge"><span class="skill-dot cloud"></span>Power BI</span>
+              <span class="skill-badge"><span class="skill-dot cloud"></span>Tableau</span>
+            </div>
+          </div>
+
+          <div class="skills-card span-2 reveal reveal-delay-2">
             <div class="skills-group-title">ML / AI Engineering</div>
             <div class="skills-grid">
               <span class="skill-badge"><span class="skill-dot ml"></span>PyTorch</span>
@@ -474,37 +513,22 @@
             </div>
           </div>
 
-          <div class="reveal reveal-delay-2">
-            <div class="skills-group-title">Data Engineering &amp; MLOps</div>
+          <div class="skills-card reveal reveal-delay-3">
+            <div class="skills-group-title">Data Engineering</div>
             <div class="skills-grid">
-              <span class="skill-badge"><span class="skill-dot data"></span>Apache Spark</span>
+              <span class="skill-badge"><span class="skill-dot data"></span>Spark</span>
               <span class="skill-badge"><span class="skill-dot data"></span>Airflow</span>
               <span class="skill-badge"><span class="skill-dot data"></span>Hadoop</span>
               <span class="skill-badge"><span class="skill-dot data"></span>Snowflake</span>
               <span class="skill-badge"><span class="skill-dot data"></span>PostgreSQL</span>
-              <span class="skill-badge"><span class="skill-dot data"></span>MySQL</span>
-              <span class="skill-badge"><span class="skill-dot data"></span>FastAPI</span>
               <span class="skill-badge"><span class="skill-dot data"></span>Docker</span>
-              <span class="skill-badge"><span class="skill-dot data"></span>Great Expectations</span>
+              <span class="skill-badge"><span class="skill-dot data"></span>FastAPI</span>
               <span class="skill-badge"><span class="skill-dot data"></span>Git</span>
             </div>
           </div>
 
-          <div class="reveal reveal-delay-3">
-            <div class="skills-group-title">Cloud, BI &amp; Vector Databases</div>
-            <div class="skills-grid">
-              <span class="skill-badge"><span class="skill-dot cloud"></span>AWS (EC2, S3)</span>
-              <span class="skill-badge"><span class="skill-dot cloud"></span>GCP</span>
-              <span class="skill-badge"><span class="skill-dot cloud"></span>Pinecone</span>
-              <span class="skill-badge"><span class="skill-dot cloud"></span>FAISS</span>
-              <span class="skill-badge"><span class="skill-dot cloud"></span>Weaviate</span>
-              <span class="skill-badge"><span class="skill-dot cloud"></span>Power BI</span>
-              <span class="skill-badge"><span class="skill-dot cloud"></span>Tableau</span>
-            </div>
-          </div>
-
-          <div class="reveal reveal-delay-4">
-            <div class="skills-group-title">Research &amp; Specializations</div>
+          <div class="skills-card span-2 reveal reveal-delay-4">
+            <div class="skills-group-title">Research Specializations</div>
             <div class="skills-grid">
               <span class="skill-badge"><span class="skill-dot science"></span>Large Language Models</span>
               <span class="skill-badge"><span class="skill-dot science"></span>Computer Vision</span>
@@ -516,22 +540,33 @@
             </div>
           </div>
 
+          <div class="skills-card reveal">
+            <div class="skills-group-title">MLOps</div>
+            <div class="skills-grid">
+              <span class="skill-badge"><span class="skill-dot data"></span>Great Expectations</span>
+              <span class="skill-badge"><span class="skill-dot data"></span>MySQL</span>
+              <span class="skill-badge"><span class="skill-dot ml"></span>Matplotlib</span>
+              <span class="skill-badge"><span class="skill-dot ml"></span>Seaborn</span>
+              <span class="skill-badge"><span class="skill-dot cloud"></span>Excel</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- ── CONTACT ────────────────────────────────────────────────── -->
+    <!-- ── CONTACT ───────────────────────────────────────────────── -->
     <section id="contact" aria-labelledby="contact-heading">
       <div class="contact-inner">
         <p class="section-label reveal" style="justify-content:center;">Contact</p>
-        <h2 class="contact-headline reveal reveal-delay-1" id="contact-heading">Let's build<br>something great.</h2>
-        <p class="contact-sub reveal reveal-delay-2">
+        <h2 class="contact-headline typo-fade reveal-delay-1" id="contact-heading">Let's build<br>something great.</h2>
+        <p class="contact-sub reveal reveal-delay-2 typo-fade-sub">
           I'm currently open to full-time Data Science, ML Engineering, and AI Research roles.
           Whether you have a role in mind or just want to connect — my inbox is open.
         </p>
 
         <div class="reveal reveal-delay-3">
-          <a href="mailto:abhishek.sutaria@gmail.com" class="contact-email-btn"
+          <a href="mailto:abhishek.sutaria@gmail.com" class="contact-email-btn btn-magnetic"
             aria-label="Send email to Abhishek Sutaria">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -574,10 +609,10 @@
     </section>
   </main>
 
-  <!-- ── FOOTER ─────────────────────────────────────────────────── -->
+  <!-- ── FOOTER ───────────────────────────────────────────────── -->
   <footer>
     <span class="footer-copy">© 2025 Abhishek Sutaria. All rights reserved.</span>
-    <span class="footer-built">Built with <span>♥</span> &amp; vanilla JS</span>
+    <span class="footer-built">Built with <span>precision</span> & vanilla JS</span>
   </footer>
 
   <script src="main.js"></script>
